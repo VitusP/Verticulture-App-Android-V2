@@ -1,0 +1,23 @@
+<resources>
+    <string name="ver_app_name">Verticulture</string>
+    <string name="ver_hint_username">Username</string>
+    <string name="ver_hint_password">Password</string>
+    <string name="ver_button_next">Next</string>
+    <string name="ver_button_cancel">Cancel</string>
+    <string name="ver_error_password">Invalid password</string>
+    <string name="ver_charerror_password">Password must contain at least 8 characters</string>
+    <string name="ver_filter_title">Filter</string>
+    <string name="ver_search_title">Search</string>
+    <string name="ver_product_title">Title</string>
+    <string name="ver_product_description">Secondary text</string>
+
+    <!-- Shrine backdrop menu labels -->
+    <string name="ver_featured_label">Featured</string>
+    <string name="ver_apartment_label">Apartment</string>
+    <string name="ver_accessories_label">Accessories</string>
+    <string name="ver_shoes_label">Shoes</string>
+    <string name="ver_tops_label">Tops</string>
+    <string name="ver_bottoms_label">Bottoms</string>
+    <string name="ver_dresses_label">Dresses</string>
+    <string name="ver_account_label">My Account</string>
+</resources>

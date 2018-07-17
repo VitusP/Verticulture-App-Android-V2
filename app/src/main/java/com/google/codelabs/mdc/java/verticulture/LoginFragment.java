@@ -28,7 +28,7 @@ import io.particle.android.sdk.utils.Async;
 import io.particle.android.sdk.utils.ui.Toaster;
 
 /**
- * Fragment representing the login screen for Shrine.
+ * Fragment representing the login screen for Verticulture.
  */
 public class LoginFragment extends Fragment {
 
@@ -65,7 +65,7 @@ public class LoginFragment extends Fragment {
         return view;
     }
 
-    // "isPasswordValid" from "Navigate to the next Fragment" section method goes here
+    // Particle Login Asynctask call
     private void particleLogin(@Nullable Editable password, @Nullable Editable ID, TextInputEditText password_edit_text, TextInputEditText email_edit_text){
         new AsyncTask<Void, Void, Boolean>() {
             protected Boolean doInBackground(Void... params) {
@@ -88,7 +88,7 @@ public class LoginFragment extends Fragment {
         }.execute();
 
     }
-
+    //check if connection to particle cloud succeded
     private void isPasswordValid(Boolean state, TextInputEditText password_edit_text, TextInputEditText email_edit_text){
         if (!state) {
             password_edit_text.setError(getString(R.string.ver_error_password));

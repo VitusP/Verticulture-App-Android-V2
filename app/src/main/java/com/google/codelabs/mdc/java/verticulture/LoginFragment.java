@@ -31,7 +31,7 @@ import io.particle.android.sdk.utils.ui.Toaster;
  * Fragment representing the login screen for Verticulture.
  */
 public class LoginFragment extends Fragment {
-
+    //HE::HELLO World!!!!
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -58,6 +58,8 @@ public class LoginFragment extends Fragment {
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
                 if (isPasswordLimit(passwordEditText.getText())) {
                     passwordTextInput.setError(null); //Clear the error
+                }else{
+                    passwordTextInput.setError("Password must be longer than 8 characters");
                 }
                 return false;
             }
@@ -88,6 +90,7 @@ public class LoginFragment extends Fragment {
         }.execute();
 
     }
+
     //check if connection to particle cloud succeded
     private void isPasswordValid(Boolean state, TextInputEditText password_edit_text, TextInputEditText email_edit_text){
         if (!state) {
@@ -98,6 +101,7 @@ public class LoginFragment extends Fragment {
         }
     }
 
+    //check if password is below 8
     private boolean isPasswordLimit(@Nullable Editable text) {
         return text != null && text.length() >= 8;
     }

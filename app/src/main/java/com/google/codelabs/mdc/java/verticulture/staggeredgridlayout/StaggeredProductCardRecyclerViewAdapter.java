@@ -34,11 +34,11 @@ public class StaggeredProductCardRecyclerViewAdapter extends RecyclerView.Adapte
     @NonNull
     @Override
     public StaggeredProductCardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        int layoutId = R.layout.ver_staggered_product_card_first;
+        int layoutId = R.layout.ver_staggered_device_card_first;
         if (viewType == 1) {
-            layoutId = R.layout.ver_staggered_product_card_second;
+            layoutId = R.layout.ver_staggered_store_card_second;
         } else if (viewType == 2) {
-            layoutId = R.layout.ver_staggered_product_card_third;
+            layoutId = R.layout.ver_staggered_setup_card_third;
         }
 
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(layoutId, parent, false);

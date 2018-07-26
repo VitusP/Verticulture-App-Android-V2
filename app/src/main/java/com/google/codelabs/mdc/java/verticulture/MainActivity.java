@@ -1,3 +1,9 @@
+/*
+    Description: App for Verticulture Android Interface
+    Edited by: Vitus Putra
+    Date last edited: 7/26/2018
+*/
+
 package com.google.codelabs.mdc.java.verticulture;
 
 import java.util.*;
@@ -17,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ver_main_activity);
 
+        //Initialize particle cloud SDK
         ParticleCloudSDK.init(this);
         ParticleDeviceSetupLibrary.init(this.getApplicationContext());
         ParticleCloudSDK.getCloud().logOut();

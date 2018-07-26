@@ -8,8 +8,8 @@
     <string name="ver_charerror_password">Password must contain at least 8 characters</string>
     <string name="ver_filter_title">Filter</string>
     <string name="ver_search_title">Search</string>
-    <string name="ver_product_title">Title</string>
-    <string name="ver_product_description">Secondary text</string>
+    <string name="ver_device_title">Devices</string>
+    <string name="ver_device_description">Access your Verticulture device</string>
 
     <!-- Shrine backdrop menu labels -->
     <string name="ver_featured_label">Featured</string>

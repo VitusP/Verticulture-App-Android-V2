@@ -97,7 +97,7 @@ public class LoginFragment extends Fragment {
             password_edit_text.setError(getString(R.string.ver_error_password));
         } else {
             password_edit_text.setError(null); // Clear the error
-            ((NavigationHost) getActivity()).navigateTo(new ProductGridFragment(), false);
+            ((NavigationHost) getActivity()).navigateTo(new ProductGridFragment(), false); //Go to product grid fragment
         }
     }
 

@@ -9,6 +9,8 @@
     <string name="ver_logout_title">Logout</string>
     <string name="ver_search_title">Search</string>
     <string name="ver_device_title">Devices</string>
+    <string name="ver_store_title">Store</string>
+    <string name="ver_setup_title">Setup</string>
     <string name="ver_device_description">Access your Verticulture device</string>
 
     <!-- Shrine backdrop menu labels -->

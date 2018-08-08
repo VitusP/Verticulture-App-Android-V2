@@ -2,6 +2,7 @@ package com.google.codelabs.mdc.java.verticulture;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.button.MaterialButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -18,6 +19,8 @@ import com.google.codelabs.mdc.java.verticulture.ProductGridItemDecoration;
 import com.google.codelabs.mdc.java.verticulture.R;
 import com.google.codelabs.mdc.java.verticulture.network.ProductEntry;
 
+import io.particle.android.sdk.cloud.ParticleCloudSDK;
+
 public class DeviceFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,15 @@ public class DeviceFragment extends Fragment {
 
         // Set up the toolbar
         setUpToolbar(view);
+        final MaterialButton logout_Button = view.findViewById(R.id.logout_Button);
+
+        logout_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ParticleCloudSDK.getCloud().logOut();
+                ((NavigationHost) getActivity()).navigateTo(new LoginFragment(), false);
+            }
+        });
 
         return view;
     }
@@ -43,6 +55,7 @@ public class DeviceFragment extends Fragment {
         if (activity != null) {
             activity.setSupportActionBar(toolbar);
         }
+        toolbar.setNavigationOnClickListener(new NavigationIconClickListener(getContext(), view.findViewById(R.id.product_grid)));
     }
 
     @Override

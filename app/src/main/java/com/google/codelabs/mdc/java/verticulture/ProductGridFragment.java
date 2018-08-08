@@ -3,6 +3,7 @@ package com.google.codelabs.mdc.java.verticulture;
 import android.content.ClipData;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.button.MaterialButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -39,6 +40,16 @@ public class ProductGridFragment extends Fragment {
 
         // Set up the toolbar and listener
         setUpToolbar(view);
+        final MaterialButton logout_Button = view.findViewById(R.id.logout_Button);
+
+        logout_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ParticleCloudSDK.getCloud().logOut();
+                ((NavigationHost) getActivity()).navigateTo(new LoginFragment(), false);
+            }
+        });
+
 
 
         // Set up the RecyclerView

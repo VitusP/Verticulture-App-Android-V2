@@ -32,6 +32,7 @@ import io.particle.android.sdk.utils.ui.Toaster;
  */
 public class LoginFragment extends Fragment {
     //HE::HELLO World!!!!
+    private TextInputEditText passwordText;
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class LoginFragment extends Fragment {
         // Snippet from "Navigate to the next Fragment" section goes here.
         final TextInputLayout passwordTextInput = view.findViewById(R.id.password_text_input);
         final TextInputEditText passwordEditText = view.findViewById(R.id.password_edit_text);
+        passwordText = view.findViewById(R.id.password_edit_text);
         final TextInputEditText emailEditText = view.findViewById(R.id.email_edit_text);
         MaterialButton nextButton = view.findViewById(R.id.next_button);
 
@@ -95,6 +97,7 @@ public class LoginFragment extends Fragment {
     private void isPasswordValid(Boolean state, TextInputEditText password_edit_text, TextInputEditText email_edit_text){
         if (!state) {
             password_edit_text.setError(getString(R.string.ver_error_password));
+            passwordText.setText("");
         } else {
             password_edit_text.setError(null); // Clear the error
             ((NavigationHost) getActivity()).navigateTo(new ProductGridFragment(), false); //Go to product grid fragment

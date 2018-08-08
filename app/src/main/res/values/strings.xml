@@ -6,7 +6,7 @@
     <string name="ver_button_cancel">Cancel</string>
     <string name="ver_error_password">Invalid password</string>
     <string name="ver_charerror_password">Password must contain at least 8 characters</string>
-    <string name="ver_filter_title">Filter</string>
+    <string name="ver_logout_title">Logout</string>
     <string name="ver_search_title">Search</string>
     <string name="ver_device_title">Devices</string>
     <string name="ver_device_description">Access your Verticulture device</string>

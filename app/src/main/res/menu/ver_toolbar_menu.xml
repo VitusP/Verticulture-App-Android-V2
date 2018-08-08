@@ -7,8 +7,8 @@
         android:title="@string/ver_search_title"
         app:showAsAction="always" />
     <item
-        android:id="@+id/filter"
-        android:icon="@drawable/ver_filter"
-        android:title="@string/ver_filter_title"
+        android:id="@+id/logout"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="@string/ver_logout_title"
         app:showAsAction="always" />
 </menu>
